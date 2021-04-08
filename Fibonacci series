@@ -1,0 +1,19 @@
+no_terms = int(input("Enter the no of terms upto which the series has to be printed "))
+
+n1, n2 = 0, 1
+c = 0
+
+if no_terms <= 0:
+   print("Please enter a positive integer")
+elif no_terms == 1:
+   print("Fibonacci sequence upto",no_terms,":")
+   print(n1)
+else:
+   print("Fibonacci sequence:")
+   while c < no_terms:
+       print(n1)
+       nth = n1 + n2
+       # update values
+       n1 = n2
+       n2 = nth
+       c += 1
